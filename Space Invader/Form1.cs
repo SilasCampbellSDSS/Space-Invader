@@ -867,7 +867,7 @@ namespace Space_Invader
             //Setting variables to original
             playerScore = 0;
             playerLives = 3;
-            
+             
             
             bunker1Health = 16;
             bunker1Leg1Health = 12;
