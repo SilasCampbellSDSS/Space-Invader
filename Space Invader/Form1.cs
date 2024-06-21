@@ -45,7 +45,7 @@ namespace Space_Invader
         int mothershipSpeed = 2;
         int bulletSpeed = 12;
         int alienBulletSpeed = 6;
-        int endLine = 0;
+        
 
         //Values for keeping track of various things
         int a = 0;
@@ -175,7 +175,7 @@ namespace Space_Invader
         public void alienMovement()
         {
             //Variable for tracking how many times the aliens have gone back and forth
-            
+            int endLine = 0;
 
             //Making aliens bounce back and forth
             for (int i = 0; i < alienRow1.Count; i++)
@@ -867,8 +867,8 @@ namespace Space_Invader
             //Setting variables to original
             playerScore = 0;
             playerLives = 3;
-            endLine = 0;
-
+            
+            
             bunker1Health = 16;
             bunker1Leg1Health = 12;
             bunker1Leg2Health = 12;
