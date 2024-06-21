@@ -504,7 +504,7 @@ namespace Space_Invader
         public void bunker1Method()
         {
             //Intersecting with bunker1
-            if (bullet.IntersectsWith(bunker1) && bunker1Health > 0 || alienBullet.IntersectsWith(bunker1) && bunker1Health > 0)
+            if (bullet.IntersectsWith(bunker1) || alienBullet.IntersectsWith(bunker1))
             {
                 bunker1Health--;
 
@@ -524,10 +524,16 @@ namespace Space_Invader
                 {
                     bunker1Brush.Color = Color.Red;
                 }
+
+                //"Removing" bunker1
+                if (bunker1Health == 0)
+                {
+                    bunker1Brush.Color = Color.Black;
+                }
             }
 
             //Intersecting with bunker1's first leg
-            if (bullet.IntersectsWith(bunker1Leg1) && bunker1Leg1Health > 0 || alienBullet.IntersectsWith(bunker1) && bunker1Leg1Health > 0)
+            if (bullet.IntersectsWith(bunker1Leg1) || alienBullet.IntersectsWith(bunker1Leg1))
             {
                 bunker1Leg1Health--;
 
@@ -547,10 +553,15 @@ namespace Space_Invader
                 {
                     bunker1Leg1Brush.Color = Color.Red;
                 }
+
+                if (bunker1Leg1Health == 0)
+                {
+                    bunker1Leg1Brush.Color = Color.Black;
+                }
             }
 
             //Intersecting with bunker1's second leg
-            if (bullet.IntersectsWith(bunker1Leg2) && bunker1Leg2Health > 0)
+            if (bullet.IntersectsWith(bunker1Leg2) || alienBullet.IntersectsWith(bunker1Leg2))
             {
                 bunker1Leg2Health--;
 
@@ -570,31 +581,18 @@ namespace Space_Invader
                 {
                     bunker1Leg2Brush.Color = Color.Red;
                 }
-            }
 
-            //"Removing" bunker1
-            if (bunker1Health == 0)
-            {
-                bunker1Brush.Color = Color.Black;
-            }
-
-            //"Removing" bunker1's first leg
-            if (bunker1Leg1Health == 0)
-            {
-                bunker1Leg1Brush.Color = Color.Black;
-            }
-
-            //"Removing" bunker1's second leg
-            if (bunker1Leg2Health == 0)
-            {
-                bunker1Leg2Brush.Color = Color.Black;
+                if (bunker1Leg2Health == 0)
+                {
+                    bunker1Leg2Brush.Color = Color.Black;
+                }
             }
         }
 
         public void bunker2Method()
         {
             //Intersecting with bunker2
-            if (bullet.IntersectsWith(bunker2) && bunker2Health > 0 || alienBullet.IntersectsWith(bunker2) && bunker2Health > 0)
+            if (bullet.IntersectsWith(bunker2) || alienBullet.IntersectsWith(bunker2))
             {
                 bunker2Health--;
 
@@ -614,10 +612,15 @@ namespace Space_Invader
                 {
                     bunker2Brush.Color = Color.Red;
                 }
+              
+                if (bunker2Health == 0)
+                {
+                    bunker2Brush.Color = Color.Black;
+                }
             }
 
             //Intersecting with bunker2's first leg
-            if (bullet.IntersectsWith(bunker2Leg1) && bunker2Leg1Health > 0 || alienBullet.IntersectsWith(bunker2) && bunker2Leg1Health > 0)
+            if (bullet.IntersectsWith(bunker2Leg1) || alienBullet.IntersectsWith(bunker2Leg1))
             {
                 bunker2Leg1Health--;
 
@@ -637,10 +640,15 @@ namespace Space_Invader
                 {
                     bunker2Leg1Brush.Color = Color.Red;
                 }
+               
+                if (bunker2Leg1Health == 0)
+                {
+                    bunker2Leg1Brush.Color = Color.Black;
+                }
             }
 
             //Intersecting with bunker2's second leg
-            if (bullet.IntersectsWith(bunker2Leg2) && bunker2Leg2Health > 0)
+            if (bullet.IntersectsWith(bunker2Leg2) || alienBullet.IntersectsWith(bunker2Leg2))
             {
                 bunker2Leg2Health--;
 
@@ -660,31 +668,18 @@ namespace Space_Invader
                 {
                     bunker2Leg2Brush.Color = Color.Red;
                 }
-            }
-
-            //"Removing" bunker2
-            if (bunker2Health == 0)
-            {
-                bunker2Brush.Color = Color.Black;
-            }
-
-            //"Removing" bunker2's first leg
-            if (bunker2Leg1Health == 0)
-            {
-                bunker2Leg1Brush.Color = Color.Black;
-            }
-
-            //"Removing" bunker2's second leg
-            if (bunker2Leg2Health == 0)
-            {
-                bunker2Leg2Brush.Color = Color.Black;
+                
+                if (bunker2Leg2Health == 0)
+                {
+                    bunker2Leg2Brush.Color = Color.Black;
+                }
             }
         }
 
         public void bunker3Method()
         {
             //Intersecting with bunker3
-            if (bullet.IntersectsWith(bunker3) && bunker3Health > 0 || alienBullet.IntersectsWith(bunker3) && bunker3Health > 0)
+            if (bullet.IntersectsWith(bunker3) || alienBullet.IntersectsWith(bunker3))
             {
                 bunker3Health--;
 
@@ -704,10 +699,15 @@ namespace Space_Invader
                 {
                     bunker3Brush.Color = Color.Red;
                 }
+             
+                if (bunker3Health == 0)
+                {
+                    bunker3Brush.Color = Color.Black;
+                }
             }
 
             //Intersecting with bunker3's first leg
-            if (bullet.IntersectsWith(bunker3Leg1) && bunker3Leg1Health > 0 || alienBullet.IntersectsWith(bunker3) && bunker3Leg1Health > 0)
+            if (bullet.IntersectsWith(bunker3Leg1) || alienBullet.IntersectsWith(bunker3Leg1))
             {
                 bunker3Leg1Health--;
 
@@ -727,10 +727,15 @@ namespace Space_Invader
                 {
                     bunker3Leg1Brush.Color = Color.Red;
                 }
+              
+                if (bunker3Leg1Health == 0)
+                {
+                    bunker3Leg1Brush.Color = Color.Black;
+                }
             }
 
             //Intersecting with bunker3's second leg
-            if (bullet.IntersectsWith(bunker3Leg2) && bunker3Leg2Health > 0)
+            if (bullet.IntersectsWith(bunker3Leg2) || alienBullet.IntersectsWith(bunker3Leg2))
             {
                 bunker3Leg2Health--;
 
@@ -750,31 +755,18 @@ namespace Space_Invader
                 {
                     bunker3Leg2Brush.Color = Color.Red;
                 }
-            }
-
-            //"Removing" bunker3
-            if (bunker3Health == 0)
-            {
-                bunker3Brush.Color = Color.Black;
-            }
-
-            //"Removing" bunker3's first leg
-            if (bunker3Leg1Health == 0)
-            {
-                bunker3Leg1Brush.Color = Color.Black;
-            }
-
-            //"Removing" bunker3's second leg
-            if (bunker3Leg2Health == 0)
-            {
-                bunker3Leg2Brush.Color = Color.Black;
+          
+                if (bunker3Leg2Health == 0)
+                {
+                    bunker3Leg2Brush.Color = Color.Black;
+                }
             }
         }
 
         public void bunker4Method()
         {
             //Intersecting with bunker4
-            if (bullet.IntersectsWith(bunker4) && bunker4Health > 0 || alienBullet.IntersectsWith(bunker4) && bunker4Health > 0)
+            if (bullet.IntersectsWith(bunker4) || alienBullet.IntersectsWith(bunker4) )
             {
                 bunker4Health--;
 
@@ -797,7 +789,7 @@ namespace Space_Invader
             }
 
             //Intersecting with bunker4's first leg
-            if (bullet.IntersectsWith(bunker4Leg1) && bunker4Leg1Health > 0 || alienBullet.IntersectsWith(bunker4) && bunker4Leg1Health > 0)
+            if (bullet.IntersectsWith(bunker4Leg1) || alienBullet.IntersectsWith(bunker4Leg1))
             {
                 bunker4Leg1Health--;
 
@@ -820,7 +812,7 @@ namespace Space_Invader
             }
 
             //Intersecting with bunker4's second leg
-            if (bullet.IntersectsWith(bunker4Leg2) && bunker4Leg2Health > 0)
+            if (bullet.IntersectsWith(bunker4Leg2) || alienBullet.IntersectsWith(bunker4Leg2))
             {
                 bunker4Leg2Health--;
 
